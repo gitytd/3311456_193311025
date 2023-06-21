@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.edirne_rehberim">
+    package="com.example.edirnegezilecekyerler">
    <application
-        android:label="edirne_rehberim"
+        android:label="edirnegezilecekyerler"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

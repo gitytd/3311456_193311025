@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Saat extends StatefulWidget {
   Saat({super.key});
@@ -10,6 +11,10 @@ class Saat extends StatefulWidget {
 class _SaatState extends State<Saat> {
   @override
   Widget build(BuildContext context) {
+
+    DateTime now = DateTime.now();
+    String formattedTime = DateFormat.Hms().format(now);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
@@ -22,7 +27,7 @@ class _SaatState extends State<Saat> {
         children: [
           Center(
             child: Text(
-              DateTime.now().toString(),
+              formattedTime,
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 25),
             ),

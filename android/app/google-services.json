@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "885604440560",
+    "project_id": "edirne-rehberim",
+    "storage_bucket": "edirne-rehberim.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885604440560:android:bbc40dad6de40f8c496535",
+        "android_client_info": {
+          "package_name": "com.yahya.edirne_rehberim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885604440560-o92772cve0lhhiu5tdaea9761hugjhlp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH3qgO5t52v2J9Kkmu9XsTC3IsuC2Oa-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885604440560-o92772cve0lhhiu5tdaea9761hugjhlp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

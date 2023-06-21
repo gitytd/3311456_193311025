@@ -7,7 +7,10 @@ import 'package:edirne_rehberim/sayfalar/sehir_harita.dart';
 import 'package:edirne_rehberim/sayfalar/tarihi.dart';
 import 'package:edirne_rehberim/sayfalar/uzaklik.dart';
 import 'package:edirne_rehberim/sayfalar/yemekler/sayfa1.dart';
+import 'package:edirne_rehberim/sayfalar/ziyaretci.dart';
 import 'package:flutter/material.dart';
+
+import 'sayfalar/hava_durumu.dart';
 
 class Menuler extends StatefulWidget {
   Menuler({super.key});
@@ -22,6 +25,7 @@ class _MenulerState extends State<Menuler> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
+        elevation: 0,
         centerTitle: true,
         title: Text('Edirne Rehberim'),
       ),
@@ -33,20 +37,65 @@ class _MenulerState extends State<Menuler> {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: GestureDetector(
-                  onTap: () {
+
+
+                  onTap: (){
                     const snackBar = SnackBar(
                       content: Text('Edirne Rehberim\'e Hos Geldiniz'),
                     );
 
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   },
-                  child: Image.asset(
-                    "assets/manzara.jpg",
-                    height: 150,
+
+                  onDoubleTap: (){
+                    const snackBar = SnackBar(
+                      content: Text('Edirne Rehberim\'e Hos Geldiniz'),
+                    );
+
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  },
+                  onLongPressUp: (){
+                    const snackBar = SnackBar(
+                      content: Text('Edirne Rehberim\'e Hos Geldiniz'),
+                    );
+
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  },
+                  onLongPress: (){
+                    const snackBar = SnackBar(
+                      content: Text('Edirne Rehberim\'e Hos Geldiniz'),
+                    );
+
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  },
+                  onSecondaryTap: (){
+                    const snackBar = SnackBar(
+                      content: Text('Edirne Rehberim\'e Hos Geldiniz'),
+                    );
+
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  },
+
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(color: Colors.green, spreadRadius: 3),
+                      ],
+                    ),
+                    child: Image.asset(
+
+                      "assets/manzara.jpg",
+                      height: 150,
+
+                    ),
                   ),
                 ),
               ),
-              MaterialButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -57,9 +106,11 @@ class _MenulerState extends State<Menuler> {
                   "Edirne Tarihi",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.green,
+
               ),
-              MaterialButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -70,9 +121,10 @@ class _MenulerState extends State<Menuler> {
                   "Gezilecek Yerler",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.green,
               ),
-              MaterialButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -83,9 +135,10 @@ class _MenulerState extends State<Menuler> {
                   "Ünlü Yemekleri",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.green,
               ),
-              MaterialButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -96,9 +149,24 @@ class _MenulerState extends State<Menuler> {
                   "Şehir Haritası",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.green,
               ),
-              MaterialButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HavaDurumu()),
+                  );
+                },
+                child: Text(
+                  "Edirnede Hava Durumu",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -109,9 +177,10 @@ class _MenulerState extends State<Menuler> {
                   "Edirnede Saat Kaç",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.green,
               ),
-              MaterialButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -122,9 +191,10 @@ class _MenulerState extends State<Menuler> {
                   "Edirne Namaz Vakitleri",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.green,
               ),
-              MaterialButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -135,9 +205,10 @@ class _MenulerState extends State<Menuler> {
                   "İletişim Numaraları",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.green,
               ),
-              MaterialButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -148,9 +219,10 @@ class _MenulerState extends State<Menuler> {
                   "Nobetçi Eczaneler",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.green,
               ),
-              MaterialButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -161,7 +233,20 @@ class _MenulerState extends State<Menuler> {
                   "İlçelere Uzaklık",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.green,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ziyaretci()),
+                  );
+                },
+                child: Text(
+                  "Ziyaretçi Defteri",
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ],
           ),
